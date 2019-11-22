@@ -24,6 +24,12 @@ class EtudController extends Controller
 
         $checkInsert = DB::table('etudiants')->insert($data);
 
+        if (count($checkInsert)>0) {
+            echo "etudiant a été ajouté";
+        } else {
+            echo "etudiant n'a pas été ajouté";
+        }
+
     } 
 
     //lister les etudiants
