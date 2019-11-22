@@ -12,8 +12,11 @@
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('login');
 });
 
-
+Route::post('/connecter','logController@connecter');
+/*Route::post('/connecter', function (){
+    echo "it works";
+});*/
 Route::post('/ajouter','EtudController@ajouteretud');
