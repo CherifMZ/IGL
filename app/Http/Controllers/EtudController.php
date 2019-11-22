@@ -13,12 +13,14 @@ class EtudController extends Controller
 {
     //ajouter des etudiants
     public function ajouteretud(Request $req){
-    	$nom=$req->input('nom');
+        
+        $nom=$req->input('nom');
         $prenom=$req->input('prenom');
+        $email=$req->input('email');
         $password=$req->input('password');
 
 
-        $data= array('nom'=>$nom,'prenom'=>$prenom,'password'=>$password);
+        $data= array('nom'=>$nom,'prenom'=>$prenom,'email'=>$email,'password'=>$password);
 
         $checkInsert = DB::table('etudiants')->insert($data);
 

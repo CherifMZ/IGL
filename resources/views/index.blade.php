@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>Welcome</title> 
+<title>Administration</title> 
 <head>
 <!-- En-tête du document  -->
 </head>
@@ -13,9 +13,10 @@
 	<input type="text" name="nom">
 	<label for="">Prenom</label>
 	<input type="text" name="prenom">
-	<label for="">Password</label>
+	<label for="">Email</label>
+	<input type="text" name="email">
+	<label for="">Mot de passe</label>
 	<input type="text" name="password">
-    
 </div>
 	<button type="submit">ajouter</button>
 </form>
