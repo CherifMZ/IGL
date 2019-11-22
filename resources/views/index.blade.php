@@ -13,6 +13,8 @@
 	<input type="text" name="nom">
 	<label for="">Prenom</label>
 	<input type="text" name="prenom">
+	<label for="">Password</label>
+	<input type="text" name="password">
     
 </div>
 	<button type="submit">ajouter</button>
