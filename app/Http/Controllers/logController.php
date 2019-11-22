@@ -21,7 +21,13 @@ class logController extends Controller
 
         $checklogin = DB::table('login')->where(['email'=>$email,'password'=>$password])->get();
         if(count($checklogin)>0) {
-            echo "login succeful";
+
+            //rediriger quand l'admin est connecté
+            
+            return redirect()->route('home');
+            
+            //to test if it works; 1st try; : echo "login succeful";
+
         } else {
             echo "there is something wrong in your email or password";
         }
