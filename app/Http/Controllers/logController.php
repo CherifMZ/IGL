@@ -4,12 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
-use Illuminate\Foundation\Auth\Access\AuthorizesResources;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
-use DB;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Routing\Controller as BaseController;
-
+use Illuminate\Routing\Redirector;
 
 class logController extends Controller
 {
@@ -22,7 +21,7 @@ class logController extends Controller
         $checklogin = DB::table('login')->where(['email'=>$email,'password'=>$password])->get();
         if(count($checklogin)>0) {
 
-            //rediriger quand l'admin est connecté
+            //rediriger quand l'admin est connect
             
             return redirect()->route('home');
             
@@ -36,3 +35,4 @@ class logController extends Controller
 
     }
 }
+?>

@@ -6,7 +6,7 @@
 </head>
  
 <body>
-<form  method="post" action="/login.redirect">
+<form  method="post" action="/rediriger">
 	<input type="hidden" name="_token" value="{{ csrf_token() }}">
 <div>
 	<label for="">Email</label>
