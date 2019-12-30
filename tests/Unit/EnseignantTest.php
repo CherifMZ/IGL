@@ -11,7 +11,7 @@ use Illuminate\Foundation\Testing\DatabaseTransactions;
 class EnseignantTest extends TestCase
 {
     
-    public function test_ajout_etud() {
+    public function test_ajout_ens() {
     
         $faker = Faker\Factory::create(); // composer require fzaninotto/faker    
 
