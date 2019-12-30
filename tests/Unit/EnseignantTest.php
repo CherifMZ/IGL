@@ -2,11 +2,13 @@
 
 namespace Tests\Unit;
 
-require_once 'vendor/autoload.php';
-
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
+use Illuminate\Http\Request;
+use App\Http\Controllers\EnseignentController;
+
+require_once 'vendor/autoload.php';
 
 class EnseignantTest extends TestCase
 {
@@ -15,7 +17,7 @@ class EnseignantTest extends TestCase
     
         $faker = Faker\Factory::create(); // composer require fzaninotto/faker    
 
-    $request = new Request();
+      $request = new Request();
         $request['nom']=$faker->lastName;
         $request['prenom']=$faker->firstNameMale ;
         $request['email']=$faker->email;
@@ -24,7 +26,7 @@ class EnseignantTest extends TestCase
         $request['grade']=$faker->word;
 
         $enscontrol = new EnseignentController();
-        $ens = $enscontrol->add($request);
+        $ens = $enscontrol->Add($request);
 
         $this->assertDatabaseHas('utilisateur',[
             'nom' => $request['nom'],
@@ -32,6 +34,11 @@ class EnseignantTest extends TestCase
             'email' => $request['email']
         ]);
         
+         $this->assertDatabaseHas('enseignent',[
+            'date_ns' =>  $request['date_ns'],
+            'date_recrt' => $request['date_recrt'],
+            'grade' => $request['grade']
+        ]);
     }
     
     public function testExample()
