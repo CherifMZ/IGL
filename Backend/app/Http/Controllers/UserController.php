@@ -6,8 +6,16 @@ use Illuminate\Http\Request;
 use App\Utilisateur;
 use App\FunctionUse;
 
+/// Classe UserController.
+///
+/// contient la fonction de login 
 class UserController extends Controller
 {
+     /**
+     * fonction qui permetd'identifier l'utilisateur
+     * @param  \Illuminate\Http\Request  $request
+     * @return Response dire que l'utilisateur est connecté
+     */
    public function Login(Request $Request){
         $loginvalid=FunctionUse::GetUser($Request['email'],$Request['motpass']);
         if(count($loginvalid)>0){
