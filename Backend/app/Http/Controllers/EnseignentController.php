@@ -6,13 +6,16 @@ use App\Enseignent;
 use App\Utilisateur;
 use Illuminate\Http\Request;
 
+/// Classe EnseignantController.
+///
+/// Contient la fonction qui ajoute un enseignant
 class EnseignentController extends Controller
 {
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+     /** 
+     * fonction qui permet d'ajouter un enseignant
+     * @param  \Illuminate\Http\Request  $request
+     * @return Illuminate\Http\Response  dire que l'enseignant a bien été ajouté 
+    */
     public function add(Request $request)
     {
         $userens=new Utilisateur;
@@ -32,7 +35,7 @@ class EnseignentController extends Controller
         ]);
         return response([
             'status'=>'succus',
-            'data'=>"l'ensiegnant et bien inscrire"
+            'data'=>"enseignant ajouté"
         ]);
     }
     
