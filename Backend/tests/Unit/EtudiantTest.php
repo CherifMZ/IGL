@@ -6,12 +6,20 @@ use Illuminate\Foundation\Testing\DatabaseTransactions;
 use App\Http\Controllers\EtudiantController;
 use Illuminate\Http\Request;
 require_once 'vendor/autoload.php';
+
+///Classe EtudiantTest
+///
+/// contient la fonction du test unitaire d'ajout d'un etudiant
 class EtudiantTest extends TestCase
 {
-    
+    /** 
+     * test qui verifie que l'etudiant a bien été ajouté
+     * @note il faut ajouter faker : composer require fzaninotto/faker
+     * @test 
+    */
     public function test_ajout_etud() {
     
-        $faker = Faker\Factory::create(); // composer require fzaninotto/faker    
+        $faker = Faker\Factory::create();   
         
     $request = new Request();
         $request['nom']=$faker->lastName;
