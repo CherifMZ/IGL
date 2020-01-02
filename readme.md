@@ -1,2 +1,0 @@
-# IGL
-IGL PROJECT
