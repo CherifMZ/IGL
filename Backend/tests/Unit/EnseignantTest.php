@@ -33,7 +33,7 @@ class EnseignantTest extends TestCase
         $request['grade']=$faker->word;
 
         $enscontrol = new EnseignentController();
-        $ens = $enscontrol->Add($request);
+        $ens = $enscontrol->add($request);
 
         $this->assertDatabaseHas('utilisateur',[
             'nom' => $request['nom'],
