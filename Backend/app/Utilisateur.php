@@ -6,6 +6,9 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
+/// Classe Utilisateur
+///
+/// Classe qui represente le model utilisateur dans la base de donnée
 class Utilisateur extends Authenticatable
 {
     protected $table ="utilisateur";
