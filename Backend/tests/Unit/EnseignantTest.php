@@ -10,9 +10,16 @@ use App\Http\Controllers\EnseignentController;
 
 require_once 'vendor/autoload.php';
 
+///Classe EnseignantTest
+///
+/// contient la fonction du test unitaire d'ajout d'un enseignant
 class EnseignantTest extends TestCase
 {
-    
+    /** 
+     * test qui verifie que l'enseignant a bien été ajouté 
+     * @note il faut ajouter faker : composer require fzaninotto/faker
+     * @test 
+    */
     public function test_ajout_ens() {
     
         $faker = Faker\Factory::create(); // composer require fzaninotto/faker    
