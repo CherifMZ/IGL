@@ -7,13 +7,15 @@ use App\Utilisateur;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
+/// Classe EtudiantController.
+///
+/// Contient la fonction qui ajoute un etudiant
 class EtudiantController extends Controller
 {
-    /**
-     * creating a new etudiant.
-     *
+    /** 
+     * fonction qui permet d'ajouter un etudiant
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @return Response dire que l'etudiantt a bien été ajouté 
      */
     public function Add(Request $request)
     {
@@ -35,7 +37,7 @@ class EtudiantController extends Controller
         ]);
         return response([
             'status'=>'succus',
-            'data'=>"l'etudiant et bien inscrire"
+            'data'=>"etudiant ajouté"
         ]);
         
     }
